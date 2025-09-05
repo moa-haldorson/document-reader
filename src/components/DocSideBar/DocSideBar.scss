@@ -1,0 +1,9 @@
+.document-reader {
+  &__sidebar {
+    display: none;
+
+    &--expanded {
+      display: block;
+    }
+  }
+}

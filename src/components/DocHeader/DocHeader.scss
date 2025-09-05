@@ -1,0 +1,29 @@
+@use "../../styles/abstracts" as a;
+
+.document-reader {
+  &__header {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__header-button {
+    @include a.font(a.$fontRoboto, 700, normal, sans-serif);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: a.$isf-blue;
+    cursor: pointer;
+    color: white;
+  }
+}

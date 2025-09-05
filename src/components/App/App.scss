@@ -1,0 +1,33 @@
+@use "../../styles/abstracts" as a;
+
+.document-reader {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    max-width: 1200px;
+    margin: 30px auto;
+    min-height: 2000px;
+    background-color: a.$white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow-y: auto;
+  }
+
+  &__container-group {
+    display: flex;
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: a.$isf-blue;
+  cursor: pointer;
+  color: white;
+}
