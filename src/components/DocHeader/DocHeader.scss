@@ -15,7 +15,7 @@
   &__header-group {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 30px;
   }
 
   &__header-button {
@@ -25,5 +25,6 @@
     background-color: a.$isf-blue;
     cursor: pointer;
     color: white;
+    border-radius: 3px;
   }
 }

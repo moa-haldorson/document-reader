@@ -20,6 +20,7 @@ const DocHeader: React.FC<DocHeaderProps> = ({
         className="document-reader__header-button"
         onClick={() => setSideBarOpen(!sideBarOpen)}
         aria-expanded={sideBarOpen}
+        aria-controls="document-reader__sidebar"
       >
         Innehållsförteckning
       </button>

@@ -8,6 +8,7 @@ interface DocSideBarProps {
 const DocSideBar: React.FC<DocSideBarProps> = ({ sideBarOpen }) => {
   return (
     <aside
+      id="document-reader__sidebar"
       className={`document-reader__sidebar${
         sideBarOpen ? " document-reader__sidebar--expanded" : ""
       }`}

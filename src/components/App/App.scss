@@ -15,12 +15,18 @@
     min-height: 2000px;
     background-color: a.$white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
     overflow-y: auto;
+    position: relative;
   }
 
   &__container-group {
-    display: flex;
+    width: 100%;
+    position: relative;
+
+    &--expanded {
+      margin-left: 300px;
+      transition: margin-left 0.3s ease-in-out;
+    }
   }
 }
 
