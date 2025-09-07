@@ -32,6 +32,228 @@ const DocSideBar: React.FC<DocSideBarProps> = ({ sideBarOpen }) => {
               <button>+</button>
             </div>
           </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">Kapitel 2</a>
+              <button>+</button>
+            </div>
+          </li>
         </ul>
       </nav>
     </aside>

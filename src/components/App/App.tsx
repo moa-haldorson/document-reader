@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DocContent from "../DocContent/DocContent";
 import DocFooter from "../DocFooter/DocFooter";
 import DocHeader from "../DocHeader/DocHeader";
@@ -8,6 +8,24 @@ import "./App.scss";
 const App = () => {
   const [readerOpen, setReaderOpen] = useState(false);
   const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    if (readerOpen) {
+      document.body.classList.add("reader-open");
+    } else {
+      document.body.classList.remove("reader-open");
+    }
+
+    return () => {
+      document.body.classList.remove("reader-open");
+    };
+  }, [readerOpen]);
+
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    const scrollTop = e.currentTarget.scrollTop;
+    setIsSticky(scrollTop > 30);
+  };
 
   return (
     <>
@@ -19,8 +37,13 @@ const App = () => {
       >
         Läs dokument
       </button>
+      <DocContent />
       {readerOpen && (
-        <div className="document-reader" id="document-reader">
+        <div
+          className="document-reader"
+          id="document-reader"
+          onScroll={handleScroll}
+        >
           <div className="document-reader__container">
             <DocSideBar sideBarOpen={sideBarOpen} />
             <div
@@ -33,9 +56,10 @@ const App = () => {
                 setSideBarOpen={setSideBarOpen}
                 readerOpen={readerOpen}
                 setReaderOpen={setReaderOpen}
+                isSticky={isSticky}
               />
               <DocContent />
-              <DocFooter />
+              <DocFooter sideBarOpen={sideBarOpen} />
             </div>
           </div>
         </div>

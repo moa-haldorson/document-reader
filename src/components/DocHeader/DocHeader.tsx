@@ -6,16 +6,21 @@ interface DocHeaderProps {
   setSideBarOpen: (open: boolean) => void;
   readerOpen: boolean;
   setReaderOpen: (open: boolean) => void;
+  isSticky?: boolean;
 }
 
 const DocHeader: React.FC<DocHeaderProps> = ({
   sideBarOpen,
   setSideBarOpen,
-  readerOpen,
   setReaderOpen,
+  isSticky,
 }) => {
   return (
-    <header className={`document-reader__header`}>
+    <header
+      className={`document-reader__header${
+        isSticky ? " document-reader__header--sticky" : ""
+      }`}
+    >
       <button
         className="document-reader__header-button"
         onClick={() => setSideBarOpen(!sideBarOpen)}
@@ -30,7 +35,6 @@ const DocHeader: React.FC<DocHeaderProps> = ({
         <button
           className="document-reader__header-button"
           onClick={() => setReaderOpen(false)}
-          aria-expanded={readerOpen}
         >
           Stäng
         </button>
