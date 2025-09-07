@@ -95,7 +95,6 @@ const App = () => {
               <DocHeader
                 sideBarOpen={sideBarOpen}
                 setSideBarOpen={setSideBarOpen}
-                readerOpen={readerOpen}
                 setReaderOpen={setReaderOpen}
                 isSticky={isSticky}
               />

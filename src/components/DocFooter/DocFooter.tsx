@@ -11,6 +11,7 @@ const DocFooter: React.FC<DocFooterProps> = ({
   headings,
   scrollProgress,
 }) => {
+  // Smooth scroll to document heading on timeline click
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -18,6 +19,7 @@ const DocFooter: React.FC<DocFooterProps> = ({
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <footer className="document-reader__footer">
       <div

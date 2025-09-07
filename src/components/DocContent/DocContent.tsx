@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./DocContent.scss";
 
 interface DocContentProps {
-  extractHeadings?: (headings: Array<HTMLHeadingElement>) => void;
+  extractHeadings: (headings: Array<HTMLHeadingElement>) => void;
 }
 
 const DocContent: React.FC<DocContentProps> = ({ extractHeadings }) => {
@@ -14,7 +14,7 @@ const DocContent: React.FC<DocContentProps> = ({ extractHeadings }) => {
     }
     const headings = Array.from(mainContentRef.current.querySelectorAll("h1"));
     extractHeadings(headings);
-  }, [extractHeadings]);
+  }, []);
 
   return (
     <main className="document-reader__main" ref={mainContentRef}>

@@ -4,9 +4,8 @@ import "./DocHeader.scss";
 interface DocHeaderProps {
   sideBarOpen: boolean;
   setSideBarOpen: (open: boolean) => void;
-  readerOpen: boolean;
   setReaderOpen: (open: boolean) => void;
-  isSticky?: boolean;
+  isSticky: boolean;
 }
 
 const DocHeader: React.FC<DocHeaderProps> = ({

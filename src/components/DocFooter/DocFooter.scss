@@ -24,22 +24,21 @@
   }
 
   &__timeline {
-    background-color: lightblue;
-    width: 100%;
     height: 4px;
-    position: relative;
-    margin-block: 6px;
+    background-color: lightblue;
+    border-radius: 3px;
   }
 
   &__timeline-progress {
     height: 4px;
-    background-color: darkblue;
+    background-color: a.$isfBlue;
     border-radius: 3px;
   }
 
   &__timeline-item {
-    width: 12px;
-    height: 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
     background-color: a.$isfBlue;
   }
