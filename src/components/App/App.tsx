@@ -45,7 +45,7 @@ const App = () => {
           onScroll={handleScroll}
         >
           <div className="document-reader__container">
-            <DocSideBar sideBarOpen={sideBarOpen} />
+            <DocSideBar sideBarOpen={sideBarOpen} isSticky={isSticky} />
             <div
               className={`document-reader__container-group${
                 sideBarOpen ? " document-reader__container-group--expanded" : ""

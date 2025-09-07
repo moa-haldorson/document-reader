@@ -3,18 +3,23 @@ import "./DocSideBar.scss";
 
 interface DocSideBarProps {
   sideBarOpen: boolean;
+  isSticky?: boolean;
 }
 
-const DocSideBar: React.FC<DocSideBarProps> = ({ sideBarOpen }) => {
+const DocSideBar: React.FC<DocSideBarProps> = ({ sideBarOpen, isSticky }) => {
   return (
     <aside
       id="document-reader__sidebar"
       className={`document-reader__sidebar${
         sideBarOpen ? " document-reader__sidebar--expanded" : ""
-      }`}
+      }${isSticky ? " document-reader__sidebar--sticky" : ""}
+      `}
     >
-      <nav>
-        <ul>
+      <nav
+        className="document-reader__sidebar-nav"
+        aria-label="Innehållsförteckning"
+      >
+        <ul className="document-reader__sidebar-list">
           <li>
             <div>
               <a href="#">Inledning</a>

@@ -4,7 +4,7 @@ import "./DocContent.scss";
 const DocContent = () => {
   return (
     <main className="document-reader__main">
-      <h2>Huvudinnehåll</h2>
+      <h1>Huvudinnehåll</h1>
       <p>
         Detta är huvudinnehållet i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -21,7 +21,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -38,7 +38,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -55,7 +55,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -72,7 +72,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -89,7 +89,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -106,7 +106,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
@@ -123,7 +123,7 @@ const DocContent = () => {
         eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
         eu aliquam nisl nunc eu nunc.
       </p>
-      <h2>Nästa innehåll</h2>
+      <h1>Nästa innehåll</h1>
       <p>
         Detta är nästa innehåll i dokumentläsaren. Här visas det valda
         dokumentet.
