@@ -8,6 +8,13 @@ interface DocHeaderProps {
   isSticky: boolean;
 }
 
+// todo: add functionality to buttons (print, download), maybe make buttons separate component
+
+/**
+ * DocHeader component represents the header area of the document reader.
+ * It contains controls for the sidebar and the document viewer.
+ */
+
 const DocHeader: React.FC<DocHeaderProps> = ({
   sideBarOpen,
   setSideBarOpen,

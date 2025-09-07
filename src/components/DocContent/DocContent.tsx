@@ -5,16 +5,23 @@ interface DocContentProps {
   extractHeadings: (headings: Array<HTMLHeadingElement>) => void;
 }
 
+/**
+ * DocContent component represents the main content area of the document reader.
+ * It extracts all h1 headings from its content and sends them to the parent component
+ * via the extractHeadings callback prop.
+ */
+
 const DocContent: React.FC<DocContentProps> = ({ extractHeadings }) => {
   const mainContentRef = useRef<HTMLElement>(null);
 
+  // Extract headings on mount
   useEffect(() => {
     if (!mainContentRef.current || !extractHeadings) {
       return;
     }
     const headings = Array.from(mainContentRef.current.querySelectorAll("h1"));
     extractHeadings(headings);
-  }, []);
+  });
 
   return (
     <main className="document-reader__main" ref={mainContentRef}>

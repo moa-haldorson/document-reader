@@ -5,6 +5,12 @@ import DocHeader from "../DocHeader/DocHeader";
 import DocSideBar from "../DocSideBar/DocSideBar";
 import "./App.scss";
 
+/**
+ * App component represents the main application for the document reader.
+ * It manages the state for the document reader, including whether it is open,
+ * whether the sidebar is open, and the extracted headings from the document content.
+ */
+
 const App = () => {
   const [readerOpen, setReaderOpen] = useState(false);
   const [sideBarOpen, setSideBarOpen] = useState(false);

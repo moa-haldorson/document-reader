@@ -6,6 +6,11 @@ interface DocFooterProps {
   scrollProgress: number;
 }
 
+/**
+ * DocFooter component represents the footer area of the document reader.
+ * It contains the timeline for document navigation.
+ */
+
 const DocFooter: React.FC<DocFooterProps> = ({
   sideBarOpen,
   headings,
@@ -14,7 +19,7 @@ const DocFooter: React.FC<DocFooterProps> = ({
   // Smooth scroll to document heading on timeline click
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const element = document.getElementById(id);
+    const element = document.getElementById(id); // find alternative way to do this in react?
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
