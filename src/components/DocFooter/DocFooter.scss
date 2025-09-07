@@ -14,12 +14,33 @@
     }
   }
 
-  &__timeline {
+  &__footer-content {
     padding: 1rem 30px;
-    background-color: a.$isfBlue;
+    background-color: a.$white;
 
     &--expanded {
       margin-left: 300px;
     }
+  }
+
+  &__timeline {
+    background-color: lightblue;
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-block: 6px;
+  }
+
+  &__timeline-progress {
+    height: 4px;
+    background-color: darkblue;
+    border-radius: 3px;
+  }
+
+  &__timeline-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: a.$isfBlue;
   }
 }

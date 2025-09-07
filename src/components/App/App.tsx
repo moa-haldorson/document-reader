@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import DocContent from "../DocContent/DocContent";
 import DocFooter from "../DocFooter/DocFooter";
 import DocHeader from "../DocHeader/DocHeader";
@@ -9,7 +9,30 @@ const App = () => {
   const [readerOpen, setReaderOpen] = useState(false);
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [headings, setHeadings] = useState<Array<HTMLHeadingElement>>([]);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
+  // Handle scroll event to set sticky header and scroll progress
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    const container = e.currentTarget;
+
+    setIsSticky(container.scrollTop > 30); // Top margin of document-reader__container is 30px
+
+    const scrollTop = container.scrollTop;
+    const scrollHeight = container.scrollHeight - container.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    setScrollProgress(Math.min(progress, 100));
+  };
+
+  // Extract headings from the document content
+  const handleExtractHeadings = useCallback(
+    (headings: Array<HTMLHeadingElement>) => {
+      setHeadings(headings);
+    },
+    []
+  );
+
+  // Add or remove class to body when reader is open
   useEffect(() => {
     if (readerOpen) {
       document.body.classList.add("reader-open");
@@ -22,11 +45,6 @@ const App = () => {
     };
   }, [readerOpen]);
 
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const scrollTop = e.currentTarget.scrollTop;
-    setIsSticky(scrollTop > 30);
-  };
-
   return (
     <>
       <button
@@ -37,7 +55,30 @@ const App = () => {
       >
         Läs dokument
       </button>
-      <DocContent />
+      <h2>Sidan bakom dokumentet</h2>
+      <p>
+        Detta är sidan bakom dokumentläsaren. När du klickar på knappen "Läs
+        dokument" öppnas dokumentläsaren ovanpå denna sida.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nunc ut laoreet tincidunt, nunc nisl aliquam nunc, eu aliquam nisl nunc
+        eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
+        eu aliquam nisl nunc eu nunc.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nunc ut laoreet tincidunt, nunc nisl aliquam nunc, eu aliquam nisl nunc
+        eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
+        eu aliquam nisl nunc eu nunc.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nunc ut laoreet tincidunt, nunc nisl aliquam nunc, eu aliquam nisl nunc
+        eu nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc,
+        eu aliquam nisl nunc eu nunc.
+      </p>
+
       {readerOpen && (
         <div
           className="document-reader"
@@ -45,7 +86,7 @@ const App = () => {
           onScroll={handleScroll}
         >
           <div className="document-reader__container">
-            <DocSideBar sideBarOpen={sideBarOpen} isSticky={isSticky} />
+            <DocSideBar sideBarOpen={sideBarOpen} />
             <div
               className={`document-reader__container-group${
                 sideBarOpen ? " document-reader__container-group--expanded" : ""
@@ -58,8 +99,12 @@ const App = () => {
                 setReaderOpen={setReaderOpen}
                 isSticky={isSticky}
               />
-              <DocContent />
-              <DocFooter sideBarOpen={sideBarOpen} />
+              <DocContent extractHeadings={handleExtractHeadings} />
+              <DocFooter
+                sideBarOpen={sideBarOpen}
+                headings={headings}
+                scrollProgress={scrollProgress}
+              />
             </div>
           </div>
         </div>
