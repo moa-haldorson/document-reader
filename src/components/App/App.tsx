@@ -92,18 +92,16 @@ const App = () => {
           onScroll={handleScroll}
         >
           <div className="document-reader__container">
-            <DocSideBar sideBarOpen={sideBarOpen} />
+            <DocSideBar
+              sideBarOpen={sideBarOpen}
+              setSideBarOpen={setSideBarOpen}
+            />
             <div
               className={`document-reader__container-group${
                 sideBarOpen ? " document-reader__container-group--expanded" : ""
               }`}
             >
-              <DocHeader
-                sideBarOpen={sideBarOpen}
-                setSideBarOpen={setSideBarOpen}
-                setReaderOpen={setReaderOpen}
-                isSticky={isSticky}
-              />
+              <DocHeader setReaderOpen={setReaderOpen} isSticky={isSticky} />
               <DocContent extractHeadings={handleExtractHeadings} />
               <DocFooter
                 sideBarOpen={sideBarOpen}

@@ -2,8 +2,6 @@ import React from "react";
 import "./DocHeader.scss";
 
 interface DocHeaderProps {
-  sideBarOpen: boolean;
-  setSideBarOpen: (open: boolean) => void;
   setReaderOpen: (open: boolean) => void;
   isSticky: boolean;
 }
@@ -15,34 +13,21 @@ interface DocHeaderProps {
  * It contains controls for the sidebar and the document viewer.
  */
 
-const DocHeader: React.FC<DocHeaderProps> = ({
-  sideBarOpen,
-  setSideBarOpen,
-  setReaderOpen,
-  isSticky,
-}) => {
+const DocHeader: React.FC<DocHeaderProps> = ({ setReaderOpen, isSticky }) => {
   return (
     <header
       className={`document-reader__header${
         isSticky ? " document-reader__header--sticky" : ""
       }`}
     >
-      <button
-        className="document-reader__header-button"
-        onClick={() => setSideBarOpen(!sideBarOpen)}
-        aria-expanded={sideBarOpen}
-        aria-controls="document-reader__sidebar"
-      >
-        Innehållsförteckning
-      </button>
       <div className="document-reader__header-group">
-        <button className="document-reader__header-button">Skriv ut</button>
-        <button className="document-reader__header-button">Ladda ner</button>
+        <button className="document-reader__header-button">🖨 Skriv ut</button>
+        <button className="document-reader__header-button">⬇️ Ladda ner</button>
         <button
           className="document-reader__header-button"
           onClick={() => setReaderOpen(false)}
         >
-          Stäng
+          ⨉ Stäng
         </button>
       </div>
     </header>

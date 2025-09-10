@@ -6,6 +6,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   overflow-y: auto;
+  scroll-behavior: smooth;
 
   &__container {
     max-width: 1200px;
@@ -29,7 +30,7 @@
 .btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: a.$isfBlue;
+  background-color: a.$blue;
   cursor: pointer;
   color: white;
 }

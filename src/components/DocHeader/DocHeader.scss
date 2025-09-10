@@ -4,11 +4,13 @@
   &__header {
     position: sticky;
     top: 0;
+    height: 56px;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-color: a.$white;
     transition: box-shadow 0.3s ease;
+    background-color: a.$red;
 
     &--sticky {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -22,9 +24,7 @@
 
   &__header-button {
     @include a.font(a.$fontRoboto, 700, normal, sans-serif);
-    padding: 10px 20px;
     font-size: 16px;
-    background-color: a.$isfBlue;
     cursor: pointer;
     color: white;
     border-radius: 3px;

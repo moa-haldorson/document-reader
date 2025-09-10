@@ -21,7 +21,7 @@ const DocContent: React.FC<DocContentProps> = ({ extractHeadings }) => {
     }
     const headings = Array.from(mainContentRef.current.querySelectorAll("h1"));
     extractHeadings(headings);
-  });
+  }, [extractHeadings]);
 
   return (
     <main className="document-reader__main" ref={mainContentRef}>
