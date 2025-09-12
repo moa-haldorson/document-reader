@@ -1,32 +1,5 @@
 @use "../../styles/abstracts" as a;
 
-.document-reader {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-
-  &__container {
-    max-width: 1200px;
-    min-height: 2000px;
-    margin: 30px auto 0 auto;
-    background-color: a.$white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    transition: all 0.3s ease;
-
-    @media (max-width: 1200px) {
-      margin-top: 0;
-    }
-  }
-
-  &__container-group {
-    width: 100%;
-  }
-}
-
 .btn {
   padding: 10px 20px;
   font-size: 16px;

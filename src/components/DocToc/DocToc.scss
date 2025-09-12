@@ -1,0 +1,9 @@
+@use "../../styles/abstracts" as a;
+
+.document-reader {
+  &__toc {
+    position: sticky;
+    top: a.$headerHeight;
+    overflow-y: auto;
+  }
+}

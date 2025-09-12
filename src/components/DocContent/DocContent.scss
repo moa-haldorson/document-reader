@@ -1,12 +1,16 @@
-.document-reader {
-  &__main {
-    max-width: 750px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 90px;
+@use "../../styles/abstracts" as a;
 
-    h1 {
-      scroll-margin-top: 76px;
+.document-reader {
+  &__content {
+    max-width: a.$contentWidth;
+    margin: 64px auto;
+    background-color: a.$lightgray;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      scroll-margin-top: a.$headerHeight;
     }
   }
 }

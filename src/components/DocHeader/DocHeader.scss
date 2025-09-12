@@ -4,29 +4,39 @@
   &__header {
     position: sticky;
     top: 0;
-    height: 56px;
-    padding: 1rem;
+    min-height: a.$headerHeight;
     display: flex;
-    justify-content: flex-end;
-    background-color: a.$white;
-    transition: box-shadow 0.3s ease;
+    justify-content: space-between;
     background-color: a.$red;
-
-    &--sticky {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+    padding-right: 2rem;
+    z-index: 1;
   }
 
   &__header-group {
     display: flex;
-    gap: 30px;
+    gap: 3rem;
   }
 
   &__header-button {
     @include a.font(a.$fontRoboto, 700, normal, sans-serif);
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    color: white;
-    border-radius: 3px;
+    color: a.$white;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+
+    &--sidebar {
+      width: 100%;
+      max-width: a.$sidebarWidth;
+      gap: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    &--expanded {
+      background-color: a.$lightblue;
+      color: a.$darkblue;
+    }
   }
 }
